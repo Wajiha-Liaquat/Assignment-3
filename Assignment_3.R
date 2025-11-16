@@ -29,3 +29,9 @@ question3 <- merge(film, language, by = "language_id")[
 question3
 
 
+question4 <- merge(customer, store, by = "store_id")[
+  , .(first_name, last_name, store_id)
+]
+question4
+
+
