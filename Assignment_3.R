@@ -44,3 +44,13 @@ question5
 
 
 
+
+all_rented_films <- merge(inventory, rental, by = "inventory_id")[, unique(film_id)]
+
+question6 <- film[!film_id %in% all_rented_films]
+question6
+
+
+
+
+
