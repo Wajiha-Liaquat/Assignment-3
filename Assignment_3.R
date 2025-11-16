@@ -14,3 +14,6 @@ payment <- as.data.table(dbReadTable(con, "payment"))
 staff <- as.data.table(dbReadTable(con, "staff"))
 inventory <- as.data.table(dbReadTable(con, "inventory"))
 rental <- as.data.table(dbReadTable(con, "rental"))
+
+question1 <- film[rating == "PG" & rental_duration > 5]
+question1
