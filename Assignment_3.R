@@ -35,3 +35,12 @@ question4 <- merge(customer, store, by = "store_id")[
 question4
 
 
+
+
+question5 <- merge(payment, staff, by = "staff_id")[
+  , .(payment_id, amount, payment_date, staff_first = first_name, staff_last = last_name)
+]
+question5
+
+
+
