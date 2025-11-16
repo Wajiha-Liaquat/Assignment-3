@@ -53,4 +53,18 @@ question6
 
 
 
+library(ggplot2)
+library(data.table)
+
+avg_rate <- film[, .(avg_rental_rate = mean(rental_rate)), by = rating]
+
+# Line plot
+ggplot(avg_rate, aes(x = rating, y = avg_rental_rate, group = 1)) +
+  geom_line() +
+  geom_point() +
+  labs(
+    title = "Average Rental Rate by Film Rating",
+    x = "Film Rating",
+    y = "Average Rental Rate"
+  )
 
