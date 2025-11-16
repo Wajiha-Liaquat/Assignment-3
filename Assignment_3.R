@@ -20,3 +20,12 @@ question1
 
 question2 <- film[, .(avg_rental_rate = mean(rental_rate)), by = rating]
 question2
+
+
+question3 <- merge(film, language, by = "language_id")[
+  , .(film_count = .N), 
+  by = name
+]
+question3
+
+
