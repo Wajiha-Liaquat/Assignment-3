@@ -17,3 +17,6 @@ rental <- as.data.table(dbReadTable(con, "rental"))
 
 question1 <- film[rating == "PG" & rental_duration > 5]
 question1
+
+question2 <- film[, .(avg_rental_rate = mean(rental_rate)), by = rating]
+question2
